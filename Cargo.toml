@@ -1,0 +1,16 @@
+
+[package]
+name = "rand-select"
+version = "0.1.0"
+edition = "2024"
+authors = ["Canop <cano.petrole@gmail.com>"]
+description = "a tiny choice selector"
+keywords = ["rand"]
+license = "MIT"
+categories = ["data-structures"]
+repository = "https://github.com/Canop/rand-select"
+readme = "README.md"
+rust-version = "1.85"
+
+[dependencies]
+rand = "0.9"
