@@ -45,10 +45,19 @@ struct Choice<T> {
 /// let l = selector.select();
 /// // l has half a chance to be None, and is 50% more likely to be 'B' than 'A'
 /// ```
-#[derive(Clone, Default)]
+#[derive(Clone)]
 pub struct RandomSelector<T> {
     choices: Vec<Choice<T>>,
     total_weight: f64,
+}
+
+impl<T> Default for RandomSelector<T> {
+    fn default() -> Self {
+        Self {
+            choices: Vec::new(),
+            total_weight: 0.0,
+        }
+    }
 }
 
 impl<T> RandomSelector<T> {
